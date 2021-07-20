@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Calculator
+
+> This a calculator that solves advanced problems in Physics, Mathematics.
+
+# Getting Started
+
+**To get the local copy of the project up and running you will need to run the following commands on your terminal:**
+
+`git clone https://github.com/barackm/calculator`
+
+# Live demo
+
+Visit [this link](https://blooming-peak-55302.herokuapp.com/)
 
 ## Available Scripts
 
@@ -68,3 +80,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors
+
+👤 **Barack Mukelenga**
+
+- GitHub: [@barackm](https://github.com/barackm)
+- Twitter: [@BarackMukelenga](https://twitter.com/BarackMukelenga)
+- LinkedIn: [Baraka Mukelenga](https://www.linkedin.com/in/baraka-mukelenga/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/barackm/calculator/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!❤️❤️❤️
+
+## Acknowledgments
+
+- Microverse
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2021 Baraka Mukelenga
