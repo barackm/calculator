@@ -10,6 +10,10 @@
 
 `git clone https://github.com/barackm/calculator`
 
+# Live demo
+
+Visit [this link](https://blooming-peak-55302.herokuapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
