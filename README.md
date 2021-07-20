@@ -2,7 +2,7 @@
 
 # Calculator
 
-> This a a calculator that solves advanced problems in Physics, Mathematics.
+> This a calculator that solves advanced problems in Physics, Mathematics.
 
 # Getting Started
 
