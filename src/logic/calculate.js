@@ -16,29 +16,56 @@ const calculate = (data, buttonName) => {
           next = (next * -1).toString();
         } else if (operation) {
           const splitted = next.split(`${operation}`);
-          if (splitted[1]) {
+          if (splitted[1] && splitted[0] !== '') {
             const newOperand = (splitted[1] * -1).toString();
             next = splitted[0] + operation + '('.concat(newOperand).concat(')');
           }
+        } else if (total && !operation) {
+          total *= -1;
+          next = total.toString();
         }
         break;
       case '=':
         if (next && operation) {
-          const splitted = next.split(`${operation}`);
-          if (splitted[1]) {
-            if (operation === '÷' && splitted[1] === '0') {
-              next = 'Zero division error.';
-              total = null;
-              operation = null;
-            } else {
-              const newOperand = splitted[1]
-                .replace('(', '')
-                .replace(')', '')
-                .trim();
-              total = operate(splitted[0], newOperand, operation);
-              next = total;
-              operation = null;
-              return { total, next, operation };
+          let splitted = next.split(`${operation}`);
+          if (splitted[0] === '') {
+            if (splitted[2]) {
+              if (operation === '÷' && splitted[2] === '0') {
+                next = 'Zero division error.';
+                total = null;
+                operation = null;
+              } else {
+                const newOperand = splitted[2]
+                  .replace('(', '')
+                  .replace(')', '')
+                  .trim();
+                total = operate(
+                  (splitted[1] * -1).toString(),
+                  newOperand,
+                  operation,
+                );
+                next = total;
+                operation = null;
+                return { total, next, operation };
+              }
+            }
+          } else {
+            splitted = next.split(`${operation}`);
+            if (splitted[1]) {
+              if (operation === '÷' && splitted[1] === '0') {
+                next = 'Zero division error.';
+                total = null;
+                operation = null;
+              } else {
+                const newOperand = splitted[1]
+                  .replace('(', '')
+                  .replace(')', '')
+                  .trim();
+                total = operate(splitted[0], newOperand, operation);
+                next = total;
+                operation = null;
+                return { total, next, operation };
+              }
             }
           }
         }
@@ -102,6 +129,12 @@ const calculate = (data, buttonName) => {
       next = '0';
     }
     const button = buttonName;
+    if (total && !operation) {
+      total = button;
+      next = total;
+      total = null;
+      return { total, next, operation };
+    }
     if (next === '0') {
       next = buttonName;
       return { total, next, operation };
