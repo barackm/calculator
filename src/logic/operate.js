@@ -5,7 +5,7 @@ const operate = (numberOne, numberTwo, operator) => {
   const second = numberTwo !== null ? Big(numberTwo) : 0;
   let result = 0;
   switch (operator) {
-    case 'X':
+    case 'x':
       result = first.times(second);
       break;
     case '+':
