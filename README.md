@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Calculator
+
+> This is a calculator that solves advanced problems in Physics, Mathematics.
+
+# Getting Started
+
+**To get the local copy of the project up and running you will need to run the following commands on your terminal:**
+
+`git clone https://github.com/barackm/calculator`
+
+# Live demo
+
+Visit [this link](https://blooming-peak-55302.herokuapp.com/)
 
 ## Available Scripts
 
@@ -35,9 +47,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point, you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
@@ -68,3 +80,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors
+
+👤 **Barack Mukelenga**
+
+- GitHub: [@barackm](https://github.com/barackm)
+- Twitter: [@BarackMukelenga](https://twitter.com/BarackMukelenga)
+- LinkedIn: [Baraka Mukelenga](https://www.linkedin.com/in/baraka-mukelenga/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/barackm/calculator/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!❤️❤️❤️
+
+## Acknowledgments
+
+- Microverse
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2021 Baraka Mukelenga
