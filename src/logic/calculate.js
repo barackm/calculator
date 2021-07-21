@@ -71,11 +71,11 @@ const calculate = (data, buttonName) => {
         }
         break;
       case '.':
-        if (next && !operation) {
+        if (next && !operation && !next.includes('.')) {
           next += '.';
         } else if (next && operation) {
           const splitted = next.split(`${operation}`);
-          if (splitted[1]) {
+          if (splitted[1] && !splitted[1].includes('.')) {
             next += '.';
           }
         }
@@ -129,7 +129,7 @@ const calculate = (data, buttonName) => {
       next = '0';
     }
     const button = buttonName;
-    if (total && !operation) {
+    if (total && !operation && !next.includes('.')) {
       total = button;
       next = total;
       total = null;
