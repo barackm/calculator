@@ -1,4 +1,4 @@
-// eslint-disable no-sequences
+/* eslint-disable no-sequences */
 import operate from './operate';
 
 const calculate = (data, buttonName) => {
