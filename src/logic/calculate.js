@@ -138,7 +138,7 @@ const calculate = (data, buttonName) => {
       total = null;
       return { total, next, operation };
     }
-    if (next === '0') {
+    if (next === '0' || next === '-0') {
       next = buttonName;
       return { total, next, operation };
     }
