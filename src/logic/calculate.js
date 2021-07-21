@@ -1,3 +1,4 @@
+// eslint-disable no-sequences
 import operate from './operate';
 
 const calculate = (data, buttonName) => {
@@ -53,7 +54,7 @@ const calculate = (data, buttonName) => {
             splitted = next.split(`${operation}`);
             if (splitted[1]) {
               if (operation === '÷' && splitted[1] === '0') {
-                next = 'Zero division error';
+                next = 'Zero division error.';
                 total = null;
                 operation = null;
               } else {
