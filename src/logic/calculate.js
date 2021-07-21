@@ -39,6 +39,13 @@ const calculate = (data, buttonName) => {
           }
         }
         break;
+      case '%':
+        if (total && !operation) {
+          total = operate(total, '%');
+          next = total;
+          operation = null;
+        }
+        break;
       default:
         break;
     }
