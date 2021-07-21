@@ -13,7 +13,9 @@ const calculate = (data, buttonName) => {
         operation = null;
         break;
       case '+/-':
-        if (next && !total && !operation) {
+        if (next === '0') {
+          next = '-0';
+        } else if (next && !total && !operation) {
           next = (next * -1).toString();
         } else if (operation) {
           const splitted = next.split(`${operation}`);
