@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = ({ result }) => <h3>{result}</h3>;
+const Display = ({ result }) => (
+  <div className="display-container">
+    <h3>{result}</h3>
+  </div>
+);
 
 Display.defaultProps = {
   result: '0',
