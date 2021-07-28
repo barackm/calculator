@@ -16,12 +16,18 @@ const Calculator = () => {
   };
 
   return (
-    <div className="calculator-wrapper">
+    <div className="calculator-wrapper d-flex justify-content-center align-items-center px-5">
+      <div className="overlay-calculator" />
       <div className="calculator-left-area">
+        <h3>Make all your Calculations Here</h3>
+        <hr className="diviser" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           Necessitatibus magni velit tempora quam ut tempore totam sapiente quod
-          voluptatem soluta.
+          voluptatem soluta. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quasi, magni minima omnis adipisci excepturi amet quaerat
+          commodi tempora hic enim voluptas quae quisquam consequuntur? Harum
+          ducimus nulla explicabo fugiat aspernatur?
         </p>
       </div>
       <div className="calculater-main-container">

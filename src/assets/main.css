@@ -20,6 +20,8 @@ body {
 .calculater-main-container {
   width: 700px;
   margin-top: 2rem;
+  flex: 1;
+  z-index: 999;
 }
 
 .display-container {
@@ -209,4 +211,65 @@ header.masthead .h1 {
 
 .divider {
   background-color: #ccc;
+}
+
+.calculator-wrapper {
+  background-image: url('./images/bg-header.jpeg');
+  min-height: 100vh;
+  color: #ccc;
+}
+
+.calculator-left-area {
+  flex: 1;
+  padding-right: 2rem;
+  z-index: 999;
+}
+
+.calculator-left-area p {
+  font-size: 1.15rem;
+}
+
+.overlay-calculator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quotes-main-container {
+  background-image: url(./images/bg-header.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.quote-area {
+  width: 100%;
+  height: 100vh;
+  z-index: 9 !important;
+  color: #fff;
+}
+
+.diviser {
+  z-index: 9999;
+}
+
+.overlay-calculator.quotes {
+  z-index: 1;
+}
+
+.text-center {
+  z-index: 9999;
+}
+
+.quote-title {
+  z-index: 9999;
+}
+
+.text-center i {
+  color: rgba(204, 204, 204, 0.459);
 }
