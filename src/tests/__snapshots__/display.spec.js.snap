@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Component Should match spanshot 1`] = `
+<div
+  className="display-container"
+>
+  <h3>
+    10+10
+  </h3>
+</div>
+`;
