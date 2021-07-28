@@ -202,3 +202,11 @@ header.masthead .h1 {
   background-color: #f1714e;
   transition: all 0.3s ease;
 }
+
+.hero-text {
+  color: #ccc;
+}
+
+.divider {
+  background-color: #ccc;
+}
