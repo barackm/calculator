@@ -4,7 +4,9 @@ exports[`Display Component Should match spanshot 1`] = `
 <div
   className="display-container"
 >
-  <h3>
+  <h3
+    title="result"
+  >
     10+10
   </h3>
 </div>
