@@ -18,6 +18,10 @@ Visit [this link](https://blooming-peak-55302.herokuapp.com/)
 
 In the project directory, you can run:
 
+### `npm install`
+
+Install all the available dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.\
