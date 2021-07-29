@@ -42,6 +42,31 @@ describe('Calculator Component', () => {
     expect(screen.getByTitle('result')).toHaveTextContent('10');
   });
 
+  it('should divide the two given numbers if the operator is -', async () => {
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('0'));
+    fireEvent.click(screen.getByText('÷'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('='));
+    expect(screen.getByTitle('result')).toHaveTextContent('2');
+  });
+
+  it("should not calculate if second operant doesn't exist", async () => {
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('0'));
+    fireEvent.click(screen.getByText('÷'));
+    fireEvent.click(screen.getByText('='));
+    expect(screen.getByTitle('result')).toHaveTextContent('10÷');
+  });
+
+  it('should change the sign if clicked on a different sign', async () => {
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('0'));
+    fireEvent.click(screen.getByText('÷'));
+    fireEvent.click(screen.getByText('+'));
+    expect(screen.getByTitle('result')).toHaveTextContent('10+');
+  });
+
   it('should add two floating numbers if the operator is +', async () => {
     fireEvent.click(screen.getByText('1'));
     fireEvent.click(screen.getByText('5'));

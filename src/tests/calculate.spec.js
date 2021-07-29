@@ -22,6 +22,11 @@ describe('Calculate', () => {
     expect(result.operation).toBe('+');
   });
 
+  it('should divide the two given numbers', () => {
+    const result = calculate({ total: null, next: '2÷1', operation: '÷' }, '=');
+    expect(result.total).toBe('2');
+  });
+
   it('should give the some of two given number is the operation is +', () => {
     const result = calculate(
       { total: null, next: '21+10', operation: '+' },
@@ -47,26 +52,27 @@ describe('Calculate', () => {
   });
 
   it('should give the percentage of the first operand if the buttonName is %', () => {
-    const result = calculate(
-      { total: null, next: '66', operation: '%' },
-      '%',
-    );
+    const result = calculate({ total: null, next: '66', operation: '%' }, '%');
     expect(result.total).toBe('6.6');
   });
 
   it('should return 0 as next if the buttonName is AC', () => {
-    const result = calculate(
-      { total: null, next: '66', operation: '%' },
-      'AC',
-    );
+    const result = calculate({ total: null, next: '66', operation: '%' }, 'AC');
     expect(result.next).toBe('0');
   });
 
   it('should return 23. as next if the buttonName is .', () => {
-    const result = calculate(
-      { total: null, next: '23', operation: null },
-      '.',
-    );
+    const result = calculate({ total: null, next: '23', operation: null }, '.');
     expect(result.next).toBe('23.');
+  });
+
+  it('should throw 0 error if trying to make a zero division', () => {
+    const result = calculate({ total: null, next: '0÷3', operation: '÷' }, '=');
+    expect(result.next).toBe('0');
+  });
+
+  it('should throw Zero division error.', () => {
+    const result = calculate({ total: null, next: '10÷0', operation: '÷' }, '=');
+    expect(result.next).toBe('Zero division error.');
   });
 });
