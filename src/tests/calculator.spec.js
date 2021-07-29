@@ -25,4 +25,54 @@ describe('Calculator Component', () => {
     fireEvent.click(screen.getByText('='));
     expect(screen.getByTitle('result')).toHaveTextContent('25');
   });
+
+  it('should give the percentage of the given number', async () => {
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('%'));
+    fireEvent.click(screen.getByText('='));
+    expect(screen.getByTitle('result')).toHaveTextContent('0.5');
+  });
+
+  it('should give the difference of the two given number if the operator is -', async () => {
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('-'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('='));
+    expect(screen.getByTitle('result')).toHaveTextContent('10');
+  });
+
+  it('should add two floating numbers if the operator is +', async () => {
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('.'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('-'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('='));
+    expect(screen.getByTitle('result')).toHaveTextContent('10.5');
+  });
+
+  it('should throw an error clicked on a button which does not exist', async () => {
+    expect(() => screen.getByText('12')).toThrow();
+  });
+
+  it('should throw an error clicked on a button which does not exist', async () => {
+    expect(() => screen.getByText('1.5')).toThrow();
+  });
+
+  it('should throw an error clicked on a button which does not exist', async () => {
+    expect(() => screen.getByText('/')).toThrow();
+  });
+
+  it('should clear the display screen if cliked on the AC button', async () => {
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('.'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('-'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('AC'));
+    expect(screen.getByTitle('result')).toHaveTextContent('0');
+  });
 });
